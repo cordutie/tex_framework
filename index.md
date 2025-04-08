@@ -33,13 +33,15 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 
 <div style="display: grid; grid-template-columns: 1fr 250px 250px 250px; gap: 10px;">
   <!-- Header row (Sample numbers) -->
-  <div style="font-weight: bold; text-align: center;">Model   </div>
+  <div style="font-weight: bold; text-align: center;">Model</div>
   <div style="font-weight: bold; text-align: center;">Sample 1</div>
   <div style="font-weight: bold; text-align: center;">Sample 2</div>
   <div style="font-weight: bold; text-align: center;">Sample 3</div>
 
   <!-- Fire Model Column -->
-  <div style="font-weight: bold; text-align: center;">Fire Model</div>
+  <div style="text-align: center;">
+    <img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 150px;"/>
+  </div>
   <audio controls style="max-width: 250px;">
     <source src="/assets/outputs/fire_to_fire.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -54,7 +56,9 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
   </audio>
 
   <!-- Water Model Column -->
-  <div style="font-weight: bold; text-align: center;">Water Model</div>
+  <div style="text-align: center;">
+    <img src="./assets/img/bubbles.gif" alt="Water Model" style="max-width: 150px;"/>
+  </div>
   <audio controls style="max-width: 250px;">
     <source src="/assets/outputs/water_to_fire.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -69,7 +73,9 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
   </audio>
 
   <!-- Wind Model Column -->
-  <div style="font-weight: bold; text-align: center;">Wind Model</div>
+  <div style="text-align: center;">
+    <img src="./assets/img/rain.gif" alt="Wind Model" style="max-width: 150px;"/>
+  </div>
   <audio controls style="max-width: 250px;">
     <source src="/assets/outputs/wind_to_fire.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
