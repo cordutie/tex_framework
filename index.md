@@ -1,35 +1,103 @@
 ---
-layout: default
+layout: inner
 ---
 
-# About me
+<div style="text-align: center">
 
-Hey! I'm Esteban, a Music Technology PhD student at the Music Technology Group (MTG) in Barcelona :)
+<h1>A Statistics-Driven Differentiable Approach for Sound Textures Synthesis and Analysis</h1>
 
-[see more](./1_me.html)
+<p>
+  <a href="https://cordutie.github.io/"><strong>Esteban Gutiérrez</strong></a><sup>1</sup>, 
+  <a href="https://ffont.github.io/"><strong>Frederic Font</strong></a><sup>1</sup>, 
+  <strong>Xavier Serra</strong>, and  
+  <a href="https://lonce.org/"><strong>Lonce Wyse</strong></a><sup>1</sup>
+</p>
 
-# Thoughts 
+<p><sup>1</sup> <em>Department of Information and Communications Technologies, Universitat Pompeu Fabra</em></p>
 
-I have some. I swear.
+</div>
 
-[See more](./2_thoughts.html)
+<div style="text-align: left; max-width: 800px; margin: 0 auto;">
 
-# Publications
+<p>
+This webpage provides supplementary materials for our paper <em>"A Statistics-Driven Differentiable Approach for Sound Textures Synthesis and Analysis"</em>, currently under review for the 25th edition of the Digital Audio Effects (DAFx) Conference.
+</p>
 
-[4] Gutiérrez, E., & Cádiz, R. F. (2024). _Stochastic resonance: Molding sounds from noise._ Proceedings of the 21st Sound and Music Computing Conference, July 4-6, Porto, Portugal. [https://doi.org/10.5281/zenodo.13918961](https://zenodo.org/records/13918961)
+<h2><strong>1. Introduction</strong></h2>
 
-[3] Esteban Gutiérrez, Christopher Haworth, Rodrigo F. Cádiz; _Generating Sonic Phantoms with Quadratic Difference Tone Spectrum Synthesis._ Computer Music Journal (2023); 47 (3): 19–34. doi: [https://doi.org/10.1162/COMJ_a_00687](https://doi.org/10.1162/COMJ_a_00687)
+<p>
+In this work we introduce <code>TexStat</code>, a perceptually grounded loss function inspired by McDermott and Simoncelli’s work. Alongside it, we present <code>TexEnv</code>, a lightweight differentiable synthesizer, and <code>TexDSP</code>, a DDSP-style generative model tailored for texture audio. All tools are open-source, implemented in PyTorch, and designed for efficient training and evaluation. Below are a few highlighted examples generated with <code>TexDSP</code>.
+</p>
 
-[2] Gutiérrez, E., Cádiz, R. & Haworth, C. (2023). Generating Quadratic Difference Tone Spectra for Auditory Distortion Synthesis. International Computer Music Conference 2023: The Sound of Changes, 237-243. Michigan Publishing Services. [https://hdl.handle.net/2027/fulcrum.tx31qm85s](https://hdl.handle.net/2027/fulcrum.tx31qm85s)
+<div style="text-align: center">
 
-[See more.](./3_research.html)
+<div style="display: grid; grid-template-columns: 1fr 250px 250px 250px; gap: 10px;">
+  <!-- Header row (Sample numbers) -->
+  <div style="font-weight: bold; text-align: center;">Model   </div>
+  <div style="font-weight: bold; text-align: center;">Sample 1</div>
+  <div style="font-weight: bold; text-align: center;">Sample 2</div>
+  <div style="font-weight: bold; text-align: center;">Sample 3</div>
 
-# Music
+  <!-- Fire Model Column -->
+  <div style="font-weight: bold; text-align: center;">Fire Model</div>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/fire_to_fire.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/fire_to_water.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/fire_to_wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-[See more](./4_music.html)
+  <!-- Water Model Column -->
+  <div style="font-weight: bold; text-align: center;">Water Model</div>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/water_to_fire.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/water_to_water.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/water_to_wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-<!-- # Tutorial
+  <!-- Wind Model Column -->
+  <div style="font-weight: bold; text-align: center;">Wind Model</div>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/wind_to_fire.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/wind_to_water.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio controls style="max-width: 250px;">
+    <source src="/assets/outputs/wind_to_wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
-Syntax and stuff to continue.
+</div>
 
-[see more](./tutorial_stuff.html). -->
+<div style="margin-top: 20px;"></div>
+
+<h2><strong>2. Models</strong></h2>
+
+<h2><span style="font-weight: normal;">2.1. TexStat Loss</span></h2>
+<h2><span style="font-weight: normal;">2.2. TexEnv Synthesizer</span></h2>
+<h2><span style="font-weight: normal;">2.3. TexDSP architecture</span></h2>
+
+<h2><strong>3. Experiments</strong></h2>
+
+<h2><span style="font-weight: normal;">3.1. TexStat Properties</span></h2>
+<h2><span style="font-weight: normal;">3.2. TexStat Benchmarks</span></h2>
+<h2><span style="font-weight: normal;">3.3. Summary Statistics as a Feature Vector</span></h2>
+<h2><span style="font-weight: normal;">3.4. TexEnv Resynthesis</span></h2>
+<h2><span style="font-weight: normal;">3.5. TexDSP models</span></h2>
