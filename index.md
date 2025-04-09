@@ -28,61 +28,62 @@ This webpage provides supplementary materials for our paper <em>"A Statistics-Dr
 In this work we introduce <code>TexStat</code>, a perceptually grounded loss function inspired by McDermott and Simoncelli’s work. Alongside it, we present <code>TexEnv</code>, a lightweight differentiable synthesizer, and <code>TexDSP</code>, a DDSP-style generative model tailored for texture audio. All tools are open-source, implemented in PyTorch, and designed for efficient training and evaluation. Below are a few highlighted examples generated with <code>TexDSP</code>.
 </p>
 
-<div style="text-align: center">
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+<div style="overflow-x: auto; max-width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px;">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(250px, 1fr)); gap: 20px; text-align: center;">
 
-  <!-- Header Row -->
-  <div style="font-weight: bold; text-align: center;"><strong>Fire Model</strong></div>
-  <div style="font-weight: bold; text-align: center;"><strong>Water Model</strong></div>
-  <div style="font-weight: bold; text-align: center;"><strong>Wind Model</strong></div>
+    <!-- Header Row -->
+    <div style="font-weight: bold;"><strong>Fire Model</strong></div>
+    <div style="font-weight: bold;"><strong>Water Model</strong></div>
+    <div style="font-weight: bold;"><strong>Wind Model</strong></div>
 
-  <!-- Model Images Row -->
-  <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 250px;" /></div>
-  <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 250px;" /></div>
-  <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 250px;" /></div>
+    <!-- Model Images Row -->
+    <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 100%;" /></div>
+    <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 100%;" /></div>
+    <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 100%;" /></div>
 
-  <!-- First Sample Row -->
-  <div>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  <div>
-    <audio controls style="max-width: 250px;">
-      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  <div>
-    <audio controls style="max-width: 250px;">
-      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+    <!-- First Sample Row -->
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-  <!-- Second Sample Row -->
-  <div>
-    <audio controls style="max-width: 250px;">
-      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  <div>
-    <audio controls style="max-width: 250px;">
-      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  <div>
-    <audio controls style="max-width: 250px;">
-      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+    <!-- Second Sample Row -->
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div>
+      <audio controls style="width: 100%;">
+        <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
   </div>
 </div>
+
 
 <div style="margin-top: 20px;"></div>
 <h2><strong>2. Models</strong></h2>
