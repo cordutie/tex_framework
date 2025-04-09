@@ -16,4 +16,9 @@
     </div>
     <!-- <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script> -->
   </body>
+  <style>
+    .wrapper {
+      max-width: {{ page.width_variable | default: "100%" }};
+    }
+  </style>
 </html>

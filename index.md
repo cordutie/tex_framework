@@ -1,5 +1,6 @@
 ---
 layout: inner_no_margin
+width_variable: 80%
 ---
 
 <div style="text-align: center">
@@ -28,62 +29,65 @@ This webpage provides supplementary materials for our paper <em>"A Statistics-Dr
 In this work we introduce <code>TexStat</code>, a perceptually grounded loss function inspired by McDermott and Simoncelli’s work. Alongside it, we present <code>TexEnv</code>, a lightweight differentiable synthesizer, and <code>TexDSP</code>, a DDSP-style generative model tailored for texture audio. All tools are open-source, implemented in PyTorch, and designed for efficient training and evaluation. Below are a few highlighted examples generated with <code>TexDSP</code>.
 </p>
 
-<div style="overflow-x: auto; max-width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px;">
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(250px, 1fr)); gap: 20px; text-align: center;">
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
 
-    <!-- Header Row -->
-    <div style="font-weight: bold;"><strong>Fire Model</strong></div>
-    <div style="font-weight: bold;"><strong>Water Model</strong></div>
-    <div style="font-weight: bold;"><strong>Wind Model</strong></div>
+  <!-- Header Row -->
+  <div style="font-weight: bold;"><strong>Fire Model</strong></div>
+  <div style="font-weight: bold;"><strong>Water Model</strong></div>
+  <div style="font-weight: bold;"><strong>Wind Model</strong></div>
 
-    <!-- Model Images Row -->
-    <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 100%;" /></div>
-    <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 100%;" /></div>
-    <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 100%;" /></div>
+  <!-- Model Images Row -->
+  <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 100%;" /></div>
+  <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 100%;" /></div>
+  <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 100%;" /></div>
 
-    <!-- First Sample Row -->
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+  <!-- First Sample Row -->
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
-    <!-- Second Sample Row -->
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div>
-      <audio controls style="width: 100%;">
-        <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+  <!-- Second Sample Row -->
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <audio controls style="width: 100%;">
+      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   </div>
+  <div style="margin-top: 20px;"></div>
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Figure 1.</strong> Highlighted synthesized examples. 
+  </p>  
 </div>
-
 
 <div style="margin-top: 20px;"></div>
 <h2><strong>2. Models</strong></h2>
@@ -91,17 +95,33 @@ This work introduces three models that can be used for texture sounds analysis a
 
 <div style="margin-top: 20px;"></div>
 <h2><span style="font-weight: normal;">2.1. <code>TexStat</code> Loss</span></h2>
-<p><code>TexStat</code> is a loss function based on a direct comparison of a revised version of <a href="https://doi.org/10.1016/j.neuron.2011.06.032" target="_blank" style="font-weight: normal;">McDermott and Simoncelli's summary of statistics</a>.  This approach allows the TexStat loss function to train texture sound generative models by focusing strictly on the statistical properties of sounds, rather than the sounds themselves. As a result, the synthesized textures naturally differ from the original inputs, while still preserving the essential perceptual qualities that define their type.</p>
+<p><code>TexStat</code> is a loss function based on a direct comparison of a revised version of McDermott and Simoncelli's summary of statistics <a href="https://doi.org/10.1016/j.neuron.2011.06.032" target="_blank" style="font-weight: normal;">[McDermott et al., 2020]</a>. This approach allows the TexStat loss function to train texture sound generative models by focusing strictly on the statistical properties of sounds, rather than the sounds themselves. As a result, the synthesized textures naturally differ from the original inputs, while still preserving the essential perceptual qualities that define their type.</p>
+
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Figure 2.</strong> <code>TexStat</code>'s summary of statistics extraction diagram. 
+  </p>  
+</div>
 
 <div style="margin-top: 20px;"></div>
 <h2><span style="font-weight: normal;">2.2. TexEnv Synthesizer</span></h2>
 <p><code>TexEnv</code> is a differentiable signal processor that through the use of the Inverse Discrete Fourier Transform creates a series of cyclic functions that are later imposed as amplitude envelopes of a subband decomposition of white noise. </p>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Figure 3.</strong>  <code>TexEnv</code> synthesizer diagram. 
+  </p>  
+</div>
 
 <div style="margin-top: 20px;"></div>
 <h2><span style="font-weight: normal;">2.3. TexDSP architecture</span></h2>
-<p><code>TexDSP</code> is an architecture based on <a href="https://magenta.tensorflow.org/ddsp" target="_blank" style="font-weight: normal;">Differential Digital Signal Processing (DDSP)</a> introduced as a showcase of the previous models. At its core, <code>TexDSP</code> is a simple neural network whose goal is to learn a way to map simple features to the parameters needed by <code>TexEnv</code> to generate a particular texture sound by means of the <code>TexStat</code> loss function. This is done by finding statistical patterns between amplitude envelopes of a subband decomposition of the training data and then putting all together. A figure that summarizes this architecture can be found below.</p>
-<div style="text-align: center; margin: 30px 0;">
-  <img src="./assets/img/architecture.svg" alt="TexDSP architecture" style="max-width: 100%; height: auto;">
+<p><code>TexDSP</code> is an architecture based on Differential Digital Signal Processing (DDSP) <a href="https://magenta.tensorflow.org/ddsp" target="_blank" style="font-weight: normal;">[Engel et al., 2020]</a> introduced as a showcase of the previous models. At its core, <code>TexDSP</code> is a simple neural network whose goal is to learn a way to map simple features to the parameters needed by <code>TexEnv</code> to generate a particular texture sound by means of the <code>TexStat</code> loss function. This is done by finding statistical patterns between amplitude envelopes of a subband decomposition of the training data and then putting all together. A figure that summarizes this architecture can be found below.</p>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="./assets/img/architecture.svg" alt="TexDSP architecture" style="max-width: 100%; height: auto;">
+  </div>
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Figure 4.</strong> <code>TexDSP</code> architecture diagram. 
+  </p>  
 </div>
 
 <div style="margin-top: 20px;"></div>
@@ -112,58 +132,60 @@ This work introduces three models that can be used for texture sounds analysis a
 <h2><span style="font-weight: normal;">3.1. TexStat Properties</span></h2>
 
 <p>
-Two properties desirable in a loss function tailored for texture sounds are related to the stability under time shifting and addition of noise. In order to test these properties on the <code>TexStat</code> loss function, we compute the loss between a random selection of segments of sounds corresponding to the three categories of <a href="https://huggingface.co/datasets/cordutie/MicroTex" target="_blank" style="font-weight: normal;"><code>MicroTex</code></a> and their corresponding transformations using various parameters. The experiment was also run with the MSS loss for comparison and some of the results can be found in Tables 1 and 2. For further exploration see this article's webpage.
+Two properties desirable in a loss function tailored for texture sounds are related to the stability under time shifting and addition of noise. In order to test these properties on the <code>TexStat</code> loss function, we compute the loss between a random selection of segments of sounds corresponding to the three categories of <a href="https://huggingface.co/datasets/cordutie/MicroTex" target="_blank" style="font-weight: normal;"><code>MicroTex</code></a> and their corresponding transformations using various parameters. The experiment was also run with the MSS loss for comparison and some of the results can be found in <strong>Tables 1 and 2</strong>. For further exploration see this article's webpage.
 </p>
 
-<h3>Table 1: Time-Shift Robustness</h3>
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th style="border: 1px solid #ccc; padding: 8px;">Selection</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">Loss</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">10%</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">30%</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">50%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>BOReilly</td><td><code>TexStat</code></td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td></tr>
-    <tr><td>BOReilly</td><td>MSS</td><td>5.34 ± 1.14</td><td>5.51 ± 1.29</td><td>5.58 ± 1.55</td></tr>
-    <tr><td>Freesound</td><td><code>TexStat</code></td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td></tr>
-    <tr><td>Freesound</td><td>MSS</td><td>5.17 ± 1.24</td><td>5.26 ± 1.35</td><td>5.25 ± 1.34</td></tr>
-    <tr><td>Syntex</td><td><code>TexStat</code></td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td></tr>
-    <tr><td>Syntex</td><td>MSS</td><td>10.52 ± 7.28</td><td>10.04 ± 6.62</td><td>9.45 ± 6.57</td></tr>
-  </tbody>
-</table>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+    <thead style="background-color: #f2f2f2;">
+      <tr>
+        <th style="border: 1px solid #ccc; padding: 8px;">Selection</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Loss</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">10%</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">30%</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">50%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>BOReilly</td><td><code>TexStat</code></td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td></tr>
+      <tr><td>BOReilly</td><td>MSS</td><td>5.34 ± 1.14</td><td>5.51 ± 1.29</td><td>5.58 ± 1.55</td></tr>
+      <tr><td>Freesound</td><td><code>TexStat</code></td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td></tr>
+      <tr><td>Freesound</td><td>MSS</td><td>5.17 ± 1.24</td><td>5.26 ± 1.35</td><td>5.25 ± 1.34</td></tr>
+      <tr><td>Syntex</td><td><code>TexStat</code></td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td></tr>
+      <tr><td>Syntex</td><td>MSS</td><td>10.52 ± 7.28</td><td>10.04 ± 6.62</td><td>9.45 ± 6.57</td></tr>
+    </tbody>
+  </table>
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Table 1.</strong> Time-Shift Robustness. Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
+  </p>  
+</div>
 
-<p style="font-size: 0.85em; color: #666;">
-Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
-</p>
+<div style="margin-top: 20px;"></div>
 
-<h3>Table 2: Noise Addition Robustness</h3>
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th style="border: 1px solid #ccc; padding: 8px;">Selection</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">Loss</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">10%</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">30%</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">50%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>BOReilly</td><td><code>TexStat</code></td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td></tr>
-    <tr><td>BOReilly</td><td>MSS</td><td>5.34 ± 1.14</td><td>5.51 ± 1.29</td><td>5.58 ± 1.55</td></tr>
-    <tr><td>Freesound</td><td><code>TexStat</code></td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td></tr>
-    <tr><td>Freesound</td><td>MSS</td><td>5.17 ± 1.24</td><td>5.26 ± 1.35</td><td>5.25 ± 1.34</td></tr>
-    <tr><td>Syntex</td><td><code>TexStat</code></td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td></tr>
-    <tr><td>Syntex</td><td>MSS</td><td>10.52 ± 7.28</td><td>10.04 ± 6.62</td><td>9.45 ± 6.57</td></tr>
-  </tbody>
-</table>
-
-<p style="font-size: 0.85em; color: #666;">
-Loss measurement between a sound and its noisy version. The amount of noise added is given in % of the signal's energy. Same data sampling as in the previous experiment.
-</p>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+    <thead style="background-color: #f2f2f2;">
+      <tr>
+        <th style="border: 1px solid #ccc; padding: 8px;">Selection</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">Loss</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">10%</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">30%</th>
+        <th style="border: 1px solid #ccc; padding: 8px;">50%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>BOReilly</td><td><code>TexStat</code></td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td><td>0.12 ± 0.06</td></tr>
+      <tr><td>BOReilly</td><td>MSS</td><td>5.34 ± 1.14</td><td>5.51 ± 1.29</td><td>5.58 ± 1.55</td></tr>
+      <tr><td>Freesound</td><td><code>TexStat</code></td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td><td>0.04 ± 0.03</td></tr>
+      <tr><td>Freesound</td><td>MSS</td><td>5.17 ± 1.24</td><td>5.26 ± 1.35</td><td>5.25 ± 1.34</td></tr>
+      <tr><td>Syntex</td><td><code>TexStat</code></td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td><td>0.16 ± 0.11</td></tr>
+      <tr><td>Syntex</td><td>MSS</td><td>10.52 ± 7.28</td><td>10.04 ± 6.62</td><td>9.45 ± 6.57</td></tr>
+    </tbody>
+  </table>
+  <p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Table 2.</strong> Noise-Addition Robustness. Loss measurement between a sound and its noisy version. The amount of noise added is given in % of the signal's energy. Same data sampling as in the previous experiment.
+  </p>  
+</div>
 
 <p>
 The results show that <code>TexStat</code> is highly stable with respect to both time shifting and noise addition, adding a penalty only in the category that had sounds that include silence (which generate instability since they have null standard deviance).
@@ -174,7 +196,7 @@ The results show that <code>TexStat</code> is highly stable with respect to both
 <h2><span style="font-weight: normal;">3.2. TexStat Benchmarks</span></h2>
 <p>To benchmark the computational requirements of <code>TexStat</code>, we evaluated its computation time, gradient descent time, and GPU memory usage. These measurements were conducted multiple times, recording the time taken for loss computation and optimization while tracking memory allocation. The results are presented in Table 3, along with the values for other typical losses.</p>
 
-<h3>Table 3: Computation Time and Memory Usage</h3>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
   <thead style="background-color: #f2f2f2;">
     <tr>
@@ -211,19 +233,17 @@ The results show that <code>TexStat</code> is highly stable with respect to both
     </tr>
   </tbody>
 </table>
-
-<p style="font-size: 0.85em; color: #666;">
-Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
+<p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Table 3.</strong> Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
 </p>
+</div>
 
 <p>
 The results show that, as expected, the <code>TexStat</code> loss function is slower than other less specific losses, but it uses a similar amount of memory.
 </p>
 
-
 <div style="margin-top: 20px;"></div>
 <h2><span style="font-weight: normal;">3.3. Summary Statistics as a Feature Vector</span></h2>
-<h2><span style="font-weight: normal;">3. Experiments</span></h2>
 
 <h3 id="experiments-evaluation"><code>TexStat</code> as an Evaluation Metric</h3>
 
@@ -231,7 +251,7 @@ The results show that, as expected, the <code>TexStat</code> loss function is sl
 To test <code>TexStat</code> summary statistics as a powerful representation suitable for evaluation metrics like FAD, we conducted the following experiment. First, all data in the three selections of the <code>MicroTex</code> dataset were segmented, and both their summary statistics and VGGish embeddings <a href="#ref-vggish">[VGGish]</a> were computed. Then, a downstream classifier (MLP with hidden layers 128 and 64) was trained for each case. A summary of the results is presented in Table 4.
 </p>
 
-<h4>Table 4: Classification Results</h4>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
   <thead style="background-color: #f2f2f2;">
     <tr>
@@ -252,6 +272,10 @@ To test <code>TexStat</code> summary statistics as a powerful representation sui
     <tr><td>VGGish</td><td>Syntex</td><td>0.95</td><td>0.95</td><td>0.95</td><td>0.94</td></tr>
   </tbody>
 </table>
+<p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Table 4.</strong> Lorea.
+</p>
+</div>
 
 <p>
 The results indicate that, in the context of texture sounds, <code>TexStat</code> summary statistics are strictly more informative than general-purpose embeddings like VGGish.
@@ -279,7 +303,7 @@ These insights were used to determine the optimal parameters for model training.
 To demonstrate the capabilities of <code>TexStat</code>, we trained a series of <code>TexDSP</code> models using different parameters, with <code>TexStat</code> as the sole loss function. Below are the training details for these models.
 </p>
 
-<h4>Training Details</h4>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
   <thead style="background-color: #f2f2f2;">
     <tr>
@@ -301,6 +325,10 @@ To demonstrate the capabilities of <code>TexStat</code>, we trained a series of 
     <tr><td>Wind</td><td>24</td><td>1/3</td><td>256</td><td>1.49</td></tr>
   </tbody>
 </table>
+<p style="text-align: center; font-size: 0.85em; color: #666;">
+  <strong>Table 5.</strong> Lorea.
+</p>
+</div>
 
 <p style="font-size: 0.85em; color: #666;">
 All encoders and decoders used 256 neurons per layer. All models used <code>$N_G = 6$</code> and were trained for up to 1000 epochs with early stopping, targeting a 44.1kHz sample rate.
@@ -315,7 +343,7 @@ Validation was done by resynthesizing a hold-out portion of the dataset using bo
 </ul>
 </p>
 
-<h4>Table 6: Validation Metrics</h4>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
   <thead style="background-color: #f2f2f2;">
     <tr>
@@ -328,21 +356,20 @@ Validation was done by resynthesizing a hold-out portion of the dataset using bo
   </thead>
   <tbody>
     <tr><td>Bubbles</td><td>35.2</td><td>63.7</td><td>1.2 ± 0.3</td><td>7.9 ± 0.7</td></tr>
-    <tr><td>Fire (1)</td><td>12.1</td><td>570.2</td><td>2.9 ± 2.0</td><td>10.1 ± 1.2</td></tr>
+    <tr><td>Fire<sup>(1)</sup></td><td>12.1</td><td>570.2</td><td>2.9 ± 2.0</td><td>10.1 ± 1.2</td></tr>
     <tr><td>Keyboard</td><td>13.0</td><td>1945.7</td><td>5.7 ± 2.0</td><td>9.1 ± 0.7</td></tr>
-    <tr><td>Rain (2)</td><td>11.7</td><td>36.6</td><td>0.5 ± 0.2</td><td>9.5 ± 0.3</td></tr>
-    <tr><td>River (2)</td><td>52.7</td><td>38.1</td><td>0.5 ± 0.1</td><td>7.7 ± 0.8</td></tr>
+    <tr><td>Rain<sup>(2)</sup></td><td>11.7</td><td>36.6</td><td>0.5 ± 0.2</td><td>9.5 ± 0.3</td></tr>
+    <tr><td>River<sup>(2)</sup></td><td>52.7</td><td>38.1</td><td>0.5 ± 0.1</td><td>7.7 ± 0.8</td></tr>
     <tr><td>Shards</td><td>4.6</td><td>8.1</td><td>1.0 ± 0.2</td><td>7.9 ± 0.2</td></tr>
-    <tr><td>Waterfall (2)</td><td>18.2</td><td>28.4</td><td>0.3 ± 0.0</td><td>5.0 ± 0.0</td></tr>
-    <tr><td>Wind (1)</td><td>9.7</td><td>244.7</td><td>0.8 ± 0.5</td><td>5.6 ± 0.1</td></tr>
+    <tr><td>Waterfall<sup>(1)</sup></td><td>18.2</td><td>28.4</td><td>0.3 ± 0.0</td><td>5.0 ± 0.0</td></tr>
+    <tr><td>Wind<sup>(1)</sup></td><td>9.7</td><td>244.7</td><td>0.8 ± 0.5</td><td>5.6 ± 0.1</td></tr>
   </tbody>
 </table>
 
-<p style="font-size: 0.85em; color: #666;">
-(1) Energy bands were imposed after resynthesis.  
-(2) A loudness tracker was added post-resynthesis.  
-For more comparisons, refer to NoiseBandNet <a href="#ref-noisebandnets">[ref]</a> and our webpage.
-</p>
+<p style="text-align: center; font-size: 0.85em; color: #666;">
+(1) Energy bands were imposed after resynthesis. (2) A loudness tracker was added post-resynthesis. For more comparisons, refer to NoiseBandNet <a href="#ref-noisebandnets">[ref]</a> and our webpage.</p>
+
+</div>
 
 <h4>Discussion</h4>
 <p>
