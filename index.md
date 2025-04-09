@@ -1,5 +1,5 @@
 ---
-layout: inner
+layout: inner_no_margin
 ---
 
 <div style="text-align: center">
@@ -9,15 +9,13 @@ layout: inner
 <p>
   <a href="https://cordutie.github.io/"><strong>Esteban Gutiérrez</strong></a><sup>1</sup>, 
   <a href="https://ffont.github.io/"><strong>Frederic Font</strong></a><sup>1</sup>, 
-  <strong>Xavier Serra</strong>, and  
+  <strong>Xavier Serra<sup>1</sup></strong>, and  
   <a href="https://lonce.org/"><strong>Lonce Wyse</strong></a><sup>1</sup>
 </p>
 
 <p><sup>1</sup> <em>Department of Information and Communications Technologies, Universitat Pompeu Fabra</em></p>
 
 </div>
-
-<div style="text-align: left; max-width: 800px; margin: 0 auto;">
 
 <p>
 This webpage provides supplementary materials for our paper <em>"A Statistics-Driven Differentiable Approach for Sound Textures Synthesis and Analysis"</em>, currently under review for the 25th edition of the Digital Audio Effects (DAFx) Conference.
@@ -31,72 +29,60 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 </p>
 
 <div style="text-align: center">
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-    <!-- Header row (Models and Sounds) -->
-    <div style="font-weight: bold; text-align: center;"><strong>Model</strong></div>
-    <div style="font-weight: bold; text-align: center;"><strong>Samples</strong></div>
+  <!-- Header Row -->
+  <div style="font-weight: bold; text-align: center;"><strong>Fire Model</strong></div>
+  <div style="font-weight: bold; text-align: center;"><strong>Water Model</strong></div>
+  <div style="font-weight: bold; text-align: center;"><strong>Wind Model</strong></div>
 
-  <!-- Fire Model Column -->
-  <div style="text-align: center;">
-    <img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 300px;"/>
-  </div>
+  <!-- Model Images Row -->
+  <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 250px;" /></div>
+  <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 250px;" /></div>
+  <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 250px;" /></div>
+
+  <!-- First Sample Row -->
   <div>
     <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/water_to_water.mp3" type="audio/mpeg">
+      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/fire_to_water.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div>
+    <audio controls style="max-width: 250px;">
+      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/fire_to_wind.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div>
+    <audio controls style="max-width: 250px;">
+      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
 
-  <!-- Water Model Column -->
-  <div style="text-align: center;">
-    <img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 300px;"/>
+  <!-- Second Sample Row -->
+  <div>
+    <audio controls style="max-width: 250px;">
+      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
   </div>
   <div>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/water_to_fire.mp3" type="audio/mpeg">
+    <audio controls style="max-width: 250px;">
+      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/water_to_water.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/water_to_wind.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div>
+    <audio controls style="max-width: 250px;">
+      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
 
-  <!-- Wind Model Column -->
-  <div style="text-align: center;">
-    <img src="./assets/img/rain_2.gif" alt="Wind Model" style="max-width: 300px;"/>
   </div>
-  <div>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/wind_to_fire.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/wind_to_water.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio><br>
-    <audio controls style="max-width: 300px;">
-      <source src="/assets/outputs/wind_to_wind.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  </div>
-
 </div>
-
 
 <div style="margin-top: 20px;"></div>
 <h2><strong>2. Models</strong></h2>
@@ -374,8 +360,6 @@ One known application of DDSP is <strong>timbre transfer</strong> <a href="#ref-
 <p>
 In our models, similar effects are observed with textures. For example, a fire sound passed through a water-trained model yields water-like synthesis. But since pitch and loudness are less central in textures, transfer is less clear-cut. Spectral centroid and rate are not as distinctive as pitch in musical sounds. Nonetheless, examples of this phenomenon are available on our webpage.
 </p>
-
-</div>
 
 Timbre Transfer
 

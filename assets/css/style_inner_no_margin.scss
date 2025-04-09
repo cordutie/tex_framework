@@ -5,16 +5,12 @@
 
 /* Make the wrapper centered */
 .wrapper {
-    max-width: 1920;  /* Adjust width as needed */
-    margin: 0;    /* Centers the content */
-    padding: 20px;
+    max-width: 100%;  /* Adjust width as needed */
 }
 
 /* Ensure section takes full width */
 section {
     width: 100%;     /* Take full width */
-    float: none;     /* Remove any floating */
-    text-align: left; /* Reset alignment */
 }
 
 /* Remove the left part (header) */
