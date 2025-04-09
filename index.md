@@ -23,6 +23,7 @@ layout: inner
 This webpage provides supplementary materials for our paper <em>"A Statistics-Driven Differentiable Approach for Sound Textures Synthesis and Analysis"</em>, currently under review for the 25th edition of the Digital Audio Effects (DAFx) Conference.
 </p>
 
+<div style="margin-top: 20px;"></div>
 <h2><strong>1. Introduction</strong></h2>
 
 <p>
@@ -76,7 +77,7 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 
   <!-- Wind Model Column -->
   <div style="text-align: center;">
-    <img src="./assets/img/rain.gif" alt="Wind Model" style="max-width: 300px;"/>
+    <img src="./assets/img/rain_2.gif" alt="Wind Model" style="max-width: 300px;"/>
   </div>
   <div>
     <audio controls style="max-width: 300px;">
@@ -101,6 +102,7 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 <h2><strong>2. Models</strong></h2>
 This work introduces three models that can be used for texture sounds analysis and synthesis. These model can work in conjunction but also as pieces of other models. A brief introduction for the three of them can be found here.
 
+<div style="margin-top: 20px;"></div>
 <h2><span style="font-weight: normal;">2.1. <code>TexStat</code> Loss</span></h2>
 <p><code>TexStat</code> is a loss function based on a direct comparison of a revised version of <a href="https://doi.org/10.1016/j.neuron.2011.06.032" target="_blank" style="font-weight: normal;">McDermott and Simoncelli's summary of statistics</a>.  This approach allows the TexStat loss function to train texture sound generative models by focusing strictly on the statistical properties of sounds, rather than the sounds themselves. As a result, the synthesized textures naturally differ from the original inputs, while still preserving the essential perceptual qualities that define their type.</p>
 
@@ -372,3 +374,10 @@ One known application of DDSP is <strong>timbre transfer</strong> <a href="#ref-
 <p>
 In our models, similar effects are observed with textures. For example, a fire sound passed through a water-trained model yields water-like synthesis. But since pitch and loudness are less central in textures, transfer is less clear-cut. Spectral centroid and rate are not as distinctive as pitch in musical sounds. Nonetheless, examples of this phenomenon are available on our webpage.
 </p>
+
+</div>
+
+Timbre Transfer
+
+[see more](./timbre_transfer.html)
+
