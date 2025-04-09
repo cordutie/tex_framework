@@ -39,30 +39,30 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 
   <!-- Model Images Row -->
   <div><img src="./assets/img/fire.gif" alt="Fire Model" style="max-width: 100%;" /></div>
-  <div><img src="./assets/img/bubbles_2.gif" alt="Water Model" style="max-width: 100%;" /></div>
-  <div><img src="./assets/img/rain_3.gif" alt="Wind Model" style="max-width: 100%;" /></div>
+  <div><img src="./assets/img/bubbles_2.gif" alt="Bubbles Model" style="max-width: 100%;" /></div>
+  <div><img src="./assets/img/wind.gif" alt="Wind Model" style="max-width: 100%;" /></div>
 
   <!-- First Sample Row -->
   <div>
     <audio controls style="width: 100%;">
-      <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
+      <source src="./assets/audios/texdsp_resynthesis/fire_resynth.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <audio controls style="width: 100%;">
-      <source src="/assets/outputs/water_1.mp3" type="audio/mpeg" />
+      <source src="./assets/audios/texdsp_resynthesis/bubbles_resynth.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <audio controls style="width: 100%;">
-      <source src="/assets/outputs/rain_1.mp3" type="audio/mpeg" />
+      <source src="/assets/audios/texdsp_resynthesis/wind_resynth.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
 
-  <!-- Second Sample Row -->
+  <!-- Second Sample Row
   <div>
     <audio controls style="width: 100%;">
       <source src="/assets/outputs/fire_1.mp3" type="audio/mpeg" />
@@ -86,7 +86,8 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
   <div style="margin-top: 20px;"></div>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
   <strong>Figure 1.</strong> Highlighted synthesized examples. 
-  </p>  
+  </p>   -->
+</div>
 </div>
 
 <div style="margin-top: 20px;"></div>
