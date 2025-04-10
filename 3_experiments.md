@@ -277,6 +277,6 @@ One known application of DDSP is <strong>timbre transfer</strong> <a href="#ref-
 In our models, similar effects are observed with textures. For example, a fire sound passed through a water-trained model yields water-like synthesis. But since pitch and loudness are less central in textures, transfer is less clear-cut. Spectral centroid and rate are not as distinctive as pitch in musical sounds. Nonetheless, examples of this phenomenon are available on our webpage.
 </p>
 
-[see more](https://cordutie.github.io/tex_framework/timbre_transfer.html)
+<a href="https://cordutie.github.io/tex_framework/timbre_transfer.html">[See more.]</a>
 
 </details>
