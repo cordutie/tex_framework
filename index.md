@@ -34,3 +34,14 @@ This webpage provides supplementary materials for our paper <em>"A Statistics-Dr
 <h2><strong>3. Experiment and Sound Examples</strong></h2>
 {% include_relative 3_experiments.md %}
 
+<div style="margin-top: 40px;"></div>
+<div style="display: flex; justify-content: center;">
+  <div style="border-left: 4px solid rgb(255, 255, 255); background: #f0f8ff; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 8px; max-width: 200px; width: 100%;">
+    <strong>Nomenclature:</strong>
+    <ul style="list-style: none; padding: 0.5em 0 0 0; margin: 0;">
+      <li>🎧 Include Sound Example</li>
+      <li>📊 Include Charts</li>
+      <li>📖 Include Theory</li>
+    </ul>
+  </div>
+</div>
