@@ -57,7 +57,7 @@ layout: inner_no_margin
 
   <!-- Row: Bubbles -->
   <div><img src="./assets/img/bubbles_2.gif" alt="Bubbles" style="max-width: 100%;"></div>
-  <div><audio controls style="width: 180px;" src="./assets/audios/texdsp_resynthesis/bubbles.mp3"></audio></div>
+  <div><audio controls style="width: 180px;" src="./assets/audios/texdsp_resynthesis/bubbles_copy.mp3"></audio></div>
   <div>Effervescence, popping rhythm</div>
   <div><audio controls style="width: 180px;" style="width: 180px;" src="./assets/audios/texdsp_timbre_transfer/bubbles_to_bubbles.mp3"></audio></div>
   <div><audio controls style="width: 180px;" src="./assets/audios/texdsp_timbre_transfer/bubbles_to_fire.mp3"></audio></div>
