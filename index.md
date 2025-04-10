@@ -57,7 +57,7 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
   </div>
   <div>
     <audio controls style="width: 100%;">
-      <source src="/assets/audios/texdsp_resynthesis/wind_resynth.mp3" type="audio/mpeg" />
+      <source src="./assets/audios/texdsp_resynthesis/wind_resynth.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
