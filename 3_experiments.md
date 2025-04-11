@@ -1,5 +1,6 @@
 <p>Several experiments were conducted to validate the ideas and models proposed in this work. The details regarding all these experiments can be found here.</p>
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 3.1. TexStat Properties ------------------------------------------------------------------------------------------------------------------------------------------>
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.1. TexStat Properties 📊</span></summary>
@@ -66,7 +67,8 @@ The results show that <code>TexStat</code> is highly stable with respect to both
 </p>
 
 </details>
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 3.2. TexStat Benchmarks ------------------------------------------------------------------------------------------------------------------------------------------>
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.2. TexStat Benchmarks 📊</span></summary>
@@ -121,7 +123,8 @@ The results show that, as expected, the <code>TexStat</code> loss function is sl
 </p>
 
 </details>
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 3.3. Summary Statistics as a Feature Vector----------------------------------------------------------------------------------------------------------------------->
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.3. Summary Statistics as a Feature Vector 📊</span></summary>
@@ -162,15 +165,16 @@ The results indicate that, in the context of texture sounds, <code>TexStat</code
 </p>
 
 </details>
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 3.4. TexEnv Resynthesis------------------------------------------------------------------------------------------------------------------------------------------->
 <div style="margin-top: 20px;"></div>
 <details>
-<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.4. TexEnv Resynthesis 🎧🚧</span></summary>
+<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.4. TexEnv Resynthesis 🎧</span></summary>
 <div style="margin-top: 20px;"></div>
 
 <p>
-Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis tasks, employing a signal processing-based parameter extractor, was conducted to better understand its behavior and limitations. A summary of sound examples can be found on this article's page.
-</p>
+Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis tasks, employing a signal processing-based parameter extractor, was conducted to better understand its behavior and limitations. A summary of sound examples can be found below.</p>
+
 <div style="overflow-x: auto; max-width: 100%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
   <div style="display: grid; grid-template-columns: repeat(5, minmax(200px, 1fr)); gap: 20px; text-align: center;">
 
@@ -312,18 +316,21 @@ Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis t
   </div>
 </div>
 
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box; text-align: center; font-size: 0.85em; ">
+<strong>Resynthesis using <code>TexEnv</code>.</strong> 4 sound textures are resynthesized using <code>TexEnv</code>. Parameters to run the synthesizer are computed using a DSP-based parameter extractor. The synthesis part is run using different combination of parameters to test the need for bigger filterbanks and parameters count per band. Parameters are counted for frames of around 0.74 seconds. For reference, 16 filters using 256 parameters each correspond to compression of 800% to the real sound at 44100 Hz, meanwhile for 24 filters using 512 parameters each correspond to compression of around 266%.</div>
 
 <p>
-Some key findings:
+Some key findings were the following:
 <ul>
-  <li>Water-like sounds (e.g., flowing water, rain, bubbling) benefited from <strong>larger filterbanks</strong> but not larger parameter sets.</li>
-  <li>Crackling sounds (e.g., fireworks, bonfires) improved with <strong>larger parameter sets</strong> but were less sensitive to filterbank size.</li>
+  <li>Water-like sounds (e.g., flowing water, rain, bubbling) benefited from larger filterbanks but not larger parameter sets.</li>
+  <li>Crackling sounds (e.g., fireworks, bonfires) improved with larger parameter sets but were less sensitive to filterbank size.</li>
 </ul>
 These insights were used to determine the optimal parameters for model training.
 </p>
 
 </details>
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- 3.5. TexDSP Trained Models---------------------------------------------------------------------------------------------------------------------------------------->
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP Trained Models 🎧📊🚧</span></summary>
@@ -561,7 +568,7 @@ These results highlight three main takeaways:
 
 </details>
 
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- 3.6. TexDSP Timbre Transfer--------------------------------------------------------------------------------------------------------------------------------------->
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.6. TexDSP Timbre Transfer 🎧</span></summary>
