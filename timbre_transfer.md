@@ -1,5 +1,7 @@
 ---
 layout: inner_no_margin
+width_variable: 100%
+margin: 0
 ---
 
 [back](./)
