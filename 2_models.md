@@ -10,7 +10,7 @@ This work introduces three models that can be used for texture sounds analysis a
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
   
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Figure 2.</strong> <code>TexStat</code>'s summary of statistics extraction diagram. 
+  <strong>Figure.</strong> <code>TexStat</code>'s summary of statistics extraction diagram. 
   </p>  
 </div>
 
@@ -24,7 +24,7 @@ This work introduces three models that can be used for texture sounds analysis a
 <p><code>TexEnv</code> is a differentiable signal processor that through the use of the Inverse Discrete Fourier Transform creates a series of cyclic functions that are later imposed as amplitude envelopes of a subband decomposition of white noise. </p>
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Figure 3.</strong>  <code>TexEnv</code> synthesizer diagram. 
+  <strong>Figure.</strong>  <code>TexEnv</code> synthesizer diagram. 
   </p>  
 </div>
 </details>
@@ -41,7 +41,7 @@ This work introduces three models that can be used for texture sounds analysis a
     <img src="./assets/img/architecture.svg" alt="TexDSP architecture" style="max-width: 100%; height: auto;">
   </div>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Figure 4.</strong> <code>TexDSP</code> architecture diagram. 
+  <strong>Figure.</strong> <code>TexDSP</code> architecture diagram. 
   </p>  
 </div>
 

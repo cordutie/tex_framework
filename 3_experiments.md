@@ -6,7 +6,7 @@
 <div style="margin-top: 20px;"></div>
 
 <p>
-Two properties desirable in a loss function tailored for texture sounds are related to the stability under time shifting and addition of noise. In order to test these properties on the <code>TexStat</code> loss function, we compute the loss between a random selection of segments of sounds corresponding to the three categories of <a href="https://huggingface.co/datasets/cordutie/MicroTex" target="_blank" style="font-weight: normal;"><code>MicroTex</code></a> and their corresponding transformations using various parameters. The experiment was also run with the MSS loss for comparison and some of the results can be found in <strong>Tables 1 and 2</strong>. For further exploration see this article's webpage.
+Two properties desirable in a loss function tailored for texture sounds are related to the stability under time shifting and addition of noise. In order to test these properties on the <code>TexStat</code> loss function, we compute the loss between a random selection of segments of sounds corresponding to the three categories of <a href="https://huggingface.co/datasets/cordutie/MicroTex" target="_blank" style="font-weight: normal;"><code>MicroTex</code></a> and their corresponding transformations using various parameters. The experiment was also run with the MSS loss for comparison and some of the results can be found in the tables below.
 </p>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
@@ -30,7 +30,7 @@ Two properties desirable in a loss function tailored for texture sounds are rela
     </tbody>
   </table>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 1.</strong> Time-Shift Robustness. Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
+  <strong>Table.</strong> Time-Shift Robustness. Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
   </p>  
 </div>
 
@@ -57,7 +57,7 @@ Two properties desirable in a loss function tailored for texture sounds are rela
     </tbody>
   </table>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 2.</strong> Noise-Addition Robustness. Loss measurement between a sound and its noisy version. The amount of noise added is given in % of the signal's energy. Same data sampling as in the previous experiment.
+  <strong>Table.</strong> Noise-Addition Robustness. Loss measurement between a sound and its noisy version. The amount of noise added is given in % of the signal's energy. Same data sampling as in the previous experiment.
   </p>  
 </div>
 
@@ -112,7 +112,7 @@ The results show that <code>TexStat</code> is highly stable with respect to both
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 3.</strong> Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
+  <strong>Table.</strong> Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
 </p>
 </div>
 
@@ -153,7 +153,7 @@ To test <code>TexStat</code> summary statistics as a powerful representation sui
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 4.</strong> Lorea.
+  <strong>Table.</strong> Lorea.
 </p>
 </div>
 
@@ -171,6 +171,147 @@ The results indicate that, in the context of texture sounds, <code>TexStat</code
 <p>
 Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis tasks, employing a signal processing-based parameter extractor, was conducted to better understand its behavior and limitations. A summary of sound examples can be found on this article's page.
 </p>
+<div style="overflow-x: auto; max-width: 100%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="display: grid; grid-template-columns: repeat(5, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+
+  <!-- Header Row -->
+  <div style="font-weight: bold;"><strong>Input Texture</strong></div>
+  <div style="font-weight: bold;">N<sub style="font-weight: bold; font-size: 0.8em;">F</sub>=16, parameters count=256</div>
+  <div style="font-weight: bold;">N<sub style="font-weight: bold; font-size: 0.8em;">F</sub>=16, parameters count=512</div>
+  <div style="font-weight: bold;">N<sub style="font-weight: bold; font-size: 0.8em;">F</sub>=24, parameters count=256</div>
+  <div style="font-weight: bold;">N<sub style="font-weight: bold; font-size: 0.8em;">F</sub>=24, parameters count=512</div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/bubbles_original.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/bubbles_resynth_N_F_16_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/bubbles_resynth_N_F_16_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/bubbles_resynth_N_F_24_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/bubbles_resynth_N_F_24_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Fire -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/fire_original.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/fire_resynth_N_F_16_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/fire_resynth_N_F_16_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/fire_resynth_N_F_24_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/fire_resynth_N_F_24_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- River -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/water_original.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/water_resynth_N_F_16_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/water_resynth_N_F_16_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/water_resynth_N_F_24_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/water_resynth_N_F_24_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Wind -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/wind_original.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/wind_resynth_N_F_16_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/wind_resynth_N_F_16_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/wind_resynth_N_F_24_param_per_env_256.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texenv_resynthesis/wind_resynth_N_F_24_param_per_env_512.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  </div>
+</div>
+
 
 <p>
 Some key findings:
@@ -215,7 +356,7 @@ To demonstrate the capabilities of <code>TexStat</code>, we trained a series of 
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 5.</strong> Lorea.
+  <strong>Table.</strong> Lorea.
 </p>
 </div>
 
