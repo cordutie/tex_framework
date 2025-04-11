@@ -275,7 +275,7 @@ These results highlight three main takeaways:
   <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
 
   <!-- Header Row -->
-  <div style="font-weight: bold; text-align: left;"><strong>Texture</strong></div>
+  <div style="font-weight: bold; text-align: center;"><strong>Texture</strong></div>
   <div style="font-weight: bold;"><strong>Input</strong></div>
   <div style="font-weight: bold;"><strong>Resynthesis</strong></div>
 
