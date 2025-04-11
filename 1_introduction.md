@@ -4,6 +4,13 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
 </p>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="./assets/img/architecture.svg" alt="TexDSP architecture" style="max-width: 100%; height: auto;">
+  </div>
+  <p style="text-align: center; font-size: 0.85em; color: #666;"><strong>Figure 1.1.</strong> <code>TexDSP</code> architecture diagram. </p>  
+</div>
+
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
   <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
 
   <!-- Header Row -->
@@ -35,6 +42,9 @@ In this work we introduce <code>TexStat</code>, a perceptually grounded loss fun
       Your browser does not support the audio element.
     </audio>
   </div>
+</div>
+</div>
 
-</div>
-</div>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box; text-align: center; font-size: 0.85em; ">
+<strong>Sound Examples 1.1.</strong> Sound examples generated using the <code>TexDSP</code> architecture trained using the <code>TexStat</code> loss function.</div>
+

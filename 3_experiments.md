@@ -31,7 +31,7 @@ Two properties desirable in a loss function tailored for texture sounds are rela
     </tbody>
   </table>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table.</strong> Time-Shift Robustness. Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
+  <strong>Table 3.1.</strong> Time-Shift Robustness. Loss measurement between a sound and its time-shifted version. The amount of time shift is given in % of the total signal duration. Computed over 300 one-second sounds randomly sampled from the three main sources in the <code>MicroTex</code> dataset.
   </p>  
 </div>
 
@@ -114,7 +114,7 @@ The results show that <code>TexStat</code> is highly stable with respect to both
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table.</strong> Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
+  <strong>Table 3.2.</strong> Measurements regarding computation time, gradient computation time, and memory usage in batches of 32 signals of size 65,536 (around 1.5s at a sample rate of 44,100 Hz). The losses studied were <code>TexStat</code>, Multi-Scale Spectrogram (MSS), Mean Squared Error (MSE), and Mean Absolute Error (MAE). All measurements were done using CUDA on an RTX 4090 GPU.
 </p>
 </div>
 
@@ -156,7 +156,7 @@ To test <code>TexStat</code> summary statistics as a powerful representation sui
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table.</strong> Lorea.
+  <strong>Table 3.4.</strong> Lorea.
 </p>
 </div>
 
@@ -317,7 +317,7 @@ Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis t
 </div>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box; text-align: center; font-size: 0.85em; ">
-<strong>Resynthesis using <code>TexEnv</code>.</strong> 4 sound textures are resynthesized using <code>TexEnv</code>. Parameters to run the synthesizer are computed using a DSP-based parameter extractor. The synthesis part is run using different combination of parameters to test the need for bigger filterbanks and parameters count per band. Parameters are counted for frames of around 0.74 seconds. For reference, 16 filters using 256 parameters each correspond to compression of 800% to the real sound at 44100 Hz, meanwhile for 24 filters using 512 parameters each correspond to compression of around 266%.</div>
+<strong>Sound Examples 3.1.</strong> 4 sound textures are resynthesized using <code>TexEnv</code>. Parameters to run the synthesizer are computed using a DSP-based parameter extractor. The synthesis part is run using different combination of parameters to test the need for bigger filterbanks and parameters count per band. Parameters are counted for frames of around 0.74 seconds. For reference, 16 filters using 256 parameters each correspond to compression of 800% to the real sound at 44100 Hz, meanwhile for 24 filters using 512 parameters each correspond to compression of around 266%.</div>
 
 <p>
 Some key findings were the following:
@@ -363,7 +363,7 @@ To demonstrate the capabilities of <code>TexStat</code>, we trained a series of 
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table.</strong> Lorea.
+  <strong>Table 3.5. </strong> Parameters used to train each model.
 </p>
 </div>
 
@@ -374,11 +374,11 @@ All encoders and decoders used 256 neurons per layer. All models used <code>$N_G
 <h4>Validation Method</h4>
 <p>
 Validation was done by resynthesizing a hold-out portion of the dataset using both <code>TexStat</code> and MSS-trained models. We computed:
+</p>
 <ul>
   <li>FAD metrics with VGGish and <code>TexStat</code>-based embeddings</li>
   <li>Frame-by-frame <code>TexStat</code> and MSS losses (mean ± std)</li>
 </ul>
-</p>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
 <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
@@ -402,21 +402,20 @@ Validation was done by resynthesizing a hold-out portion of the dataset using bo
     <tr><td>Wind<sup>(1)</sup></td><td>9.7</td><td>244.7</td><td>0.8 ± 0.5</td><td>5.6 ± 0.1</td></tr>
   </tbody>
 </table>
-
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-(1) Energy bands were imposed after resynthesis. (2) A loudness tracker was added post-resynthesis. For more comparisons, refer to NoiseBandNet <a href="#ref-noisebandnets">[ref]</a> and our webpage.</p>
-
+<strong>Table 3.6.</strong> Different metrics computed for resynthesis of 2 minutes long sounds. (1) Energy bands were imposed after resynthesis. (2) A loudness tracker was added post-resynthesis.
+</p>
 </div>
+
 
 <h4>Discussion</h4>
 <p>
-These results highlight three main takeaways:
+These results highlight three main takeaways:</p>
 <ol>
-  <li>Performance varied across textures, in line with findings by McDermott & Simoncelli and discussed in Subsection <code>Capabilities and Limitations</code>.</li>
+  <li>Performance varied across textures, in line with findings by McDermott & Simoncelli rythmic and pseudo-pitched sounds were not resynthesized correctly.</li>
   <li>Though our models performed adequately, reconstruction-focused models like NoiseBandNets scored higher—an expected trade-off since we focus on capturing higher-level structure, not perfect reconstruction.</li>
-  <li>Our feature-derived metrics often aligned better with perceptual quality, although a proper subjective evaluation was beyond this paper's scope.</li>
+  <li>Our feature-derived metrics often aligned better with perceptual quality, although to make this claim proper subjective evaluation must be made.</li>
 </ol>
-</p>
 
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
@@ -566,6 +565,9 @@ These results highlight three main takeaways:
   </div>
 </div>
 
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box; text-align: center; font-size: 0.85em; ">
+<strong>Sound Examples 3.2.</strong> Resynthesis sounds using different <code>TexDSP</code> trained models.</div>
+
 </details>
 
 <!-- 3.6. TexDSP Timbre Transfer--------------------------------------------------------------------------------------------------------------------------------------->
@@ -644,5 +646,7 @@ A notable application of DDSP is timbre transfer, where a model trained on one t
 
   </div>
 </div>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box; text-align: center; font-size: 0.85em; ">
+<strong>Sound Examples 3.3.</strong> Timbre transfer examples using different <code>TexDSP</code> trained models.</div>
 
 </details>
