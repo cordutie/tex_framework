@@ -3,6 +3,7 @@
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.1. TexStat Properties 📊</span></summary>
+<div style="margin-top: 20px;"></div>
 
 <p>
 Two properties desirable in a loss function tailored for texture sounds are related to the stability under time shifting and addition of noise. In order to test these properties on the <code>TexStat</code> loss function, we compute the loss between a random selection of segments of sounds corresponding to the three categories of <a href="https://huggingface.co/datasets/cordutie/MicroTex" target="_blank" style="font-weight: normal;"><code>MicroTex</code></a> and their corresponding transformations using various parameters. The experiment was also run with the MSS loss for comparison and some of the results can be found in <strong>Tables 1 and 2</strong>. For further exploration see this article's webpage.
@@ -69,6 +70,8 @@ The results show that <code>TexStat</code> is highly stable with respect to both
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.2. TexStat Benchmarks 📊</span></summary>
+<div style="margin-top: 20px;"></div>
+
 <p>To benchmark the computational requirements of <code>TexStat</code>, we evaluated its computation time, gradient descent time, and GPU memory usage. These measurements were conducted multiple times, recording the time taken for loss computation and optimization while tracking memory allocation. The results are presented in Table 3, along with the values for other typical losses.</p>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
@@ -122,6 +125,7 @@ The results show that, as expected, the <code>TexStat</code> loss function is sl
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.3. Summary Statistics as a Feature Vector 📊</span></summary>
+<div style="margin-top: 20px;"></div>
 
 <p>
 To test <code>TexStat</code> summary statistics as a powerful representation suitable for evaluation metrics like FAD, we conducted the following experiment. First, all data in the three selections of the <code>MicroTex</code> dataset were segmented, and both their summary statistics and VGGish embeddings <a href="#ref-vggish">[VGGish]</a> were computed. Then, a downstream classifier (MLP with hidden layers 128 and 64) was trained for each case. A summary of the results is presented in Table 4.
@@ -162,6 +166,8 @@ The results indicate that, in the context of texture sounds, <code>TexStat</code
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.4. TexEnv Resynthesis 🎧</span></summary>
+<div style="margin-top: 20px;"></div>
+
 <p>
 Extensive exploration using the <code>TexEnv</code> synthesizer in resynthesis tasks, employing a signal processing-based parameter extractor, was conducted to better understand its behavior and limitations. A summary of sound examples can be found on this article's page.
 </p>
@@ -180,6 +186,7 @@ These insights were used to determine the optimal parameters for model training.
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP models 🎧📊</span></summary>
+<div style="margin-top: 20px;"></div>
 
 <p>
 To demonstrate the capabilities of <code>TexStat</code>, we trained a series of <code>TexDSP</code> models using different parameters, with <code>TexStat</code> as the sole loss function. Below are the training details for these models.
@@ -269,14 +276,73 @@ These results highlight three main takeaways:
 <div style="margin-top: 20px;"></div>
 <details>
 <summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.6. TexDSP Timbre Transfer 🎧</span></summary>
+<div style="margin-top: 20px;"></div>
 
 <p>
-One known application of DDSP is <strong>timbre transfer</strong> <a href="#ref-engel2020">[Engel et al., 2020]</a>, where pitch and loudness from one source (e.g., voice) drive a model trained on another timbre (e.g., violin), producing violin-like results. This works due to DDSP’s strong inductive bias.
-</p>
-<p>
-In our models, similar effects are observed with textures. For example, a fire sound passed through a water-trained model yields water-like synthesis. But since pitch and loudness are less central in textures, transfer is less clear-cut. Spectral centroid and rate are not as distinctive as pitch in musical sounds. Nonetheless, examples of this phenomenon are available on our webpage.
+A notable application of DDSP is timbre transfer, where a model trained on one timbre can be influenced by another sound. The original paper showcased this by transferring the timbre of a violin to a voice recording, using pitch and loudness as key factors. Our models can achieve similar results with textural sounds, although the process is more intricate. Unlike musical timbres, where pitch plays a central role, textural sounds lack such defining features, which makes the transfer more complex. Nevertheless, some compelling examples of this phenomenon are highlighted below. For a comprehensive overview, a complete table showing all eight types of textures trained and their transfer results across other textures can be found <a href="./timbre_transfer.html">here</a>.
 </p>
 
-<a href="https://cordutie.github.io/tex_framework/timbre_transfer.html">[See more.]</a>
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+
+  <!-- Header Row -->
+  <div style="font-weight: bold;"><strong>Input Texture</strong></div>
+  <div style="font-weight: bold;"><strong>Texture Model</strong></div>
+  <div style="font-weight: bold;"><strong>Result</strong></div>
+
+  <!-- Wind to bubbles -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/wind.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/bubbles.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_timbre_transfer/wind_to_bubbles.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubble to river -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/bubbles.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/river.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_timbre_transfer/bubbles_to_river.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+
+  <!-- Fire to wind -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/fire.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/wind.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_timbre_transfer/fire_to_wind.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  </div>
+</div>
 
 </details>
