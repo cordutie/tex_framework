@@ -270,6 +270,154 @@ These results highlight three main takeaways:
 </ol>
 </p>
 
+
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+
+  <!-- Header Row -->
+  <div style="font-weight: bold; text-align: left;"><strong>Texture</strong></div>
+  <div style="font-weight: bold;"><strong>Input</strong></div>
+  <div style="font-weight: bold;"><strong>Resynthesis</strong></div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/bubbles_2.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/bubbles_copy.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/bubbles_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Fire -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/fire.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/fire.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/fire_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/keyboard.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/keyboard.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/keyboard_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/rain.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/rain.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/rain_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/river.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/river.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/river_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/shards.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/shards.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/shards_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/waterfall.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/waterfall.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/waterfall_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Bubbles -->
+  <div style="display: flex; align-items: center; justify-content: center;">
+    <img src="./assets/img/wind.gif" alt="Bubbles Model" style="max-width: 100%;" />
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/wind.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <audio controls style="width: 100%;">
+      <source src="./assets/audios/texdsp_resynthesis/wind_resynth.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  </div>
+</div>
+
 </details>
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
