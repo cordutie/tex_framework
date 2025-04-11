@@ -36,11 +36,11 @@ This webpage provides supplementary materials for our paper <em>"A Statistics-Dr
 
 <div style="margin-top: 40px;"></div>
 <div style="display: flex; justify-content: center;">
-  <div style="border-left: 4px solid rgb(255, 255, 255); background: #f0f8ff; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 8px; max-width: 200px; width: 100%;">
+  <div style="border-left: 4px solid rgb(255, 255, 255); background: #f0f8ff; padding: 1em 1.2em; margin: 1.5em 0; border-radius: 8px; max-width: 300px; width: 100%;">
     <strong>Legend:</strong>
     <ul style="list-style: none; padding: 0.5em 0 0 0; margin: 0;">
       <li>🎧 Sound examples included</li>
-      <li>📊 Evaluation/numerical experiments included</li>
+      <li>📊 Numerical experiments included</li>
       <li>📖 Theory included</li>
       <li>🚧 Still under construction</li>
     </ul>
