@@ -165,7 +165,7 @@ The results indicate that, in the context of texture sounds, <code>TexStat</code
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
 <div style="margin-top: 20px;"></div>
 <details>
-<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.4. TexEnv Resynthesis 🎧</span></summary>
+<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.4. TexEnv Resynthesis 🎧🚧</span></summary>
 <div style="margin-top: 20px;"></div>
 
 <p>
@@ -185,7 +185,7 @@ These insights were used to determine the optimal parameters for model training.
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
 <div style="margin-top: 20px;"></div>
 <details>
-<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP models 🎧📊</span></summary>
+<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP models 🎧📊🚧</span></summary>
 <div style="margin-top: 20px;"></div>
 
 <p>
