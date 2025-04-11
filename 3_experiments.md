@@ -283,14 +283,16 @@ A notable application of DDSP is timbre transfer, where a model trained on one t
 </p>
 
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+  <div style="display: grid; grid-template-columns: 100px repeat(3, minmax(200px, 1fr)); gap: 20px; text-align: center;">
 
   <!-- Header Row -->
-  <div style="font-weight: bold;"><strong>Input Texture</strong></div>
+  <div></div>
+  <div style="font-weight: bold; text-align: left;"><strong>Input Texture</strong></div>
   <div style="font-weight: bold;"><strong>Texture Model</strong></div>
   <div style="font-weight: bold;"><strong>Result</strong></div>
 
   <!-- Wind to bubbles -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;"><strong>Wind</strong></div>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <audio controls style="width: 100%;">
       <source src="./assets/audios/texdsp_resynthesis/wind.mp3" type="audio/mpeg" />
@@ -298,7 +300,7 @@ A notable application of DDSP is timbre transfer, where a model trained on one t
     </audio>
   </div>
   <div style="display: flex; align-items: center; justify-content: center;">
-    <img src="./assets/img/bubbles.gif" alt="Bubbles Model" style="max-width: 100%;" />
+    <img src="./assets/img/bubbles_2.gif" alt="Bubbles Model" style="max-width: 100%;" />
   </div>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <audio controls style="width: 100%;">
@@ -308,9 +310,10 @@ A notable application of DDSP is timbre transfer, where a model trained on one t
   </div>
 
   <!-- Bubble to river -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;"><strong>Bubbles</strong></div>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <audio controls style="width: 100%;">
-      <source src="./assets/audios/texdsp_resynthesis/bubbles.mp3" type="audio/mpeg" />
+      <source src="./assets/audios/texdsp_resynthesis/bubbles_copy.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -326,6 +329,7 @@ A notable application of DDSP is timbre transfer, where a model trained on one t
 
 
   <!-- Fire to wind -->
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;"><strong>Fire</strong></div>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
     <audio controls style="width: 100%;">
       <source src="./assets/audios/texdsp_resynthesis/fire.mp3" type="audio/mpeg" />
