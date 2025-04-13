@@ -18,11 +18,14 @@ This work introduces three models that can be used for texture sounds analysis a
 
 <div style="margin-top: 20px;"></div>
 <details>
-<summary><span style="font-weight: normal; font-size: 1.5em; color: black">2.2. TexEnv Synthesizer 📖🚧</span></summary>
+<summary><span style="font-weight: normal; font-size: 1.5em; color: black">2.2. TexEnv Synthesizer 📖</span></summary>
 <div style="margin-top: 20px;"></div>
 
 <p><code>TexEnv</code> is a differentiable signal processor that through the use of the Inverse Discrete Fourier Transform creates a series of cyclic functions that are later imposed as amplitude envelopes of a subband decomposition of white noise. </p>
 <div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="./assets/img/texenv.svg" alt="TexDSP architecture" style="max-width: 100%; height: auto;">
+  </div>
   <p style="text-align: center; font-size: 0.85em; color: #666;">
   <strong>Figure 2.2.</strong>  <code>TexEnv</code> synthesizer diagram. 
   </p>  
