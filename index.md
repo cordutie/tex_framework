@@ -46,3 +46,7 @@ This webpage provides supplementary materials for our paper <em>"A Statistics-Dr
     </ul>
   </div>
 </div>
+
+<h2><strong>Acknowledgements</strong></h2>
+
+This work has been supported by the project "IA y Música: Cá-tedra en Inteligencia Artificial y Música (TSI-100929-2023-1)", funded by the "Secretaría de Estado de Digitalización e Inteligencia Artificial and the Unión Europea-Next Generation EU".

@@ -345,9 +345,9 @@ To demonstrate the capabilities of <code>TexStat</code>, we trained a series of 
   <thead style="background-color: #f2f2f2;">
     <tr>
       <th style="border: 1px solid #ccc; padding: 8px;">Texture</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">$N_F$</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">Size of Cochlear Filterbank</th>
       <th style="border: 1px solid #ccc; padding: 8px;">Enc/Dec Layers</th>
-      <th style="border: 1px solid #ccc; padding: 8px;">Params per Band</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">Parameters per Band</th>
       <th style="border: 1px solid #ccc; padding: 8px;">Frame Size (s)</th>
     </tr>
   </thead>
@@ -363,13 +363,9 @@ To demonstrate the capabilities of <code>TexStat</code>, we trained a series of 
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-  <strong>Table 3.5. </strong> Parameters used to train each model.
+  <strong>Table 3.5. </strong> Parameters used to train each model. All encoders and decoders used 256 neurons per layer. All models used modulation filterbank of size 6 and were trained for up to 1000 epochs with early stopping, targeting 44.1kHz sample rate.
 </p>
 </div>
-
-<p style="font-size: 0.85em; color: #666;">
-All encoders and decoders used 256 neurons per layer. All models used <code>$N_G = 6$</code> and were trained for up to 1000 epochs with early stopping, targeting a 44.1kHz sample rate.
-</p>
 
 <h4>Validation Method</h4>
 <p>
