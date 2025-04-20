@@ -333,7 +333,7 @@ These insights were used to determine the optimal parameters for model training.
 <!-- 3.5. TexDSP Trained Models---------------------------------------------------------------------------------------------------------------------------------------->
 <div style="margin-top: 20px;"></div>
 <details>
-<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP Trained Models 🎧📊🚧</span></summary>
+<summary><span style="font-weight: normal; font-size: 1.5em; color: black">3.5. TexDSP Trained Models 🎧📊</span></summary>
 <div style="margin-top: 20px;"></div>
 
 <p>
@@ -401,6 +401,36 @@ Validation was done by resynthesizing a hold-out portion of the dataset using bo
 <p style="text-align: center; font-size: 0.85em; color: #666;">
 <strong>Table 3.6.</strong> Different metrics computed for resynthesis of 2 minutes long sounds. (1) Energy bands were imposed after resynthesis. (2) A loudness tracker was added post-resynthesis.
 </p>
+</div>
+
+<p>
+For comparison, we trained the noisebandnet architecture with the same sounds and using the default hyperparameters (used in the original paper) and we used the same validation metrics. The results can be found in the table below.
+</p>
+
+<div style="overflow-x: auto; max-width: 80%; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px;">Texture</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">FAD (VGGish)</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">FAD (Ours)</th>
+      <th style="border: 1px solid #ccc; padding: 8px;"><code>TexStat</code></th>
+      <th style="border: 1px solid #ccc; padding: 8px;">MSS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Bubbles</td>                <td>21.3</td>  <td>29.9</td>     <td>0.7 ± 0.1</td>  <td>4.7 ± 0.1</td></tr>
+    <tr><td>Fire<sup>(1)</sup></td>      <td>2.5</td>  <td>819.8</td>    <td>1.7 ± 1.0</td>  <td>4.5 ± 0.2</td></tr>
+    <tr><td>Keyboard</td>                <td>9.7</td> <td>29385.4</td>   <td>20.0 ± 7.7</td> <td>13.8 ± 0.6</td></tr>
+    <tr><td>Rain<sup>(2)</sup></td>     <td>11.3</td> <td>465.9</td>     <td>2.4 ± 2.0</td>  <td>9.1 ± 0.4</td></tr>
+    <tr><td>River<sup>(2)</sup></td>    <td>49.9</td>  <td>13.2</td>     <td>0.6 ± 0.1</td>  <td>6.7 ± 0.3</td></tr>
+    <tr><td>Shards</td>                 <td>1.4</td>   <td>86.8</td>     <td>1.1 ± 0.3</td>  <td>8.8 ± 0.2</td></tr>
+    <tr><td>Waterfall<sup>(1)</sup></td><td>25.9</td>  <td>18.6</td>     <td>0.4 ± 0.0</td>  <td>6.3 ± 0.0</td></tr>
+    <tr><td>Wind<sup>(1)</sup></td>    <td>31.4</td>   <td>309.6</td>    <td>1.1 ± 0.7</td>  <td>5.8 ± 0.2</td></tr>
+  </tbody>
+</table>
+<p style="text-align: center; font-size: 0.85em; color: #666;">
+<strong>Table 3.7.</strong> Different metrics computed for resynthesis of 2 minutes long sounds using the noisebandnet architecture.
 </div>
 
 
