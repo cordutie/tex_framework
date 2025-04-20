@@ -38,6 +38,10 @@ margin: 0
   }
 </style>
 
+<p>
+The table below presents 64 examples showcasing timbre transfer results using eight different <code>TexDSP</code> models applied to eight distinct texture sounds. Something interesting is that different models will deal differently with some details in the input. Some of this details are pointed out in the third column. 
+</p>
+
 <div class="texture-grid">
 
   <!-- Full-width header row -->

@@ -430,7 +430,7 @@ For comparison, we trained the noisebandnet architecture with the same sounds an
   </tbody>
 </table>
 <p style="text-align: center; font-size: 0.85em; color: #666;">
-<strong>Table 3.7.</strong> Different metrics computed for resynthesis of 2 minutes long sounds using the noisebandnet architecture.
+<strong>Table 3.7.</strong> Different metrics computed for resynthesis of 2 minutes long sounds using the noisebandnet architecture.</p>
 </div>
 
 
